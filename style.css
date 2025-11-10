@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+/*reset o basico*/
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+/*definindo a cor de fundo, abrindo o flexbox e ajustando para ficar no meio e deinindo o tamanho de acordo com a tela*/
+body {
+    background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*definindo o tamanho de acordo com a tela*/
+}
+/*CAIXA DA CALCULADORA ;definindo a cor da calculadora, o espaço entre as coisas de dentro sa calculadora, arredondando a borda, largura da calculadora, colocando sombra na calculadora, ativando o flexbox, e colocando como calculadora*/
+.calculadora{
+    background-color: rgba(148, 187, 233, 1);
+    padding: 25px;
+    border-radius: 20px;
+    width: 320px;
+    box-shadow: -1px 2px 25px 10px rgba(0,0,0,0.88);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;/*espacamentro entre os botoes e a dela da calculadora*/
+}
+/*TELA; largura, altura, tamanho da fonte, cria uma borda dentro da tela, cor do fundo da tea, colocando o texto para esquerda, e somra na tela*/
+#tela{
+    width: 100%;
+    height: 60px;
+    font-size: 28px;
+    padding: 10px;
+    border: none;
+    border-radius:10px;
+    background-color:rgba(238, 174, 202, 1);
+    text-align: right;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5) ;
+    box-shadow: inset 13px 16px 38px -7px rgb(167, 198, 235);
+}
+/*ajustando os botoes*/
+.botoes{
+    display: flex;
+    flex-direction: column;/*altera a direção para coluna*/
+    gap: 15px; /*ele cria espaço*/
+}
+.linha-botoes{ /*ativa o flexbox na linha da caixa*/
+    display: flex;
+    gap: 15px;
+}
+button{ /*mechendo nos botoes; grossura das palavras, tamanho das palavras , tirando a borda preta, adicionando a borda e ajustando, cor das palavras, cor de fundo, sombra do fundo dos botoes, mudando o mouse, transição, ajustando a ultima linha*/
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    color: #ee5151;
+    background-color:  rgb(243, 219, 219);
+    box-shadow: inset 13px 16px 38px -7px  rgb(166, 201, 241);
+    cursor: pointer;//*muda a seta para uma mão*/
+    transition: all 0.2s ease;
+    flex: 1;
+}
+button:hover{ /*hover para quando apertar o botao*/
+    background-color: rgb(139, 235, 203);
+    transform: translateX(-5px);
+}
+button:active{ /*para quando ele estiver ativado*/
+    transform: scale(0.97);/*faz os itens pulares*/
+}
+.operador{/*mudando a cor de botoes com essa class*/
+    background-color: aquamarine;
+}
+.operador:hover{/*hover para quando apertar o botao; ao apertar o botao faz com que mude a cor*/
+    background-color: rgb(166, 201, 241);
+}
+.botao-limpar{ /*mudando a cor do botao e da letra*/
+    background-color: #e0cfcf;
+    color: #f07eaf;
+}
+.botao-limpar:hover{ /*mudando a or do botao ao colocar por cima o mouse*/
+    background-color: rgb(176, 168, 253);
+
+}
+.botao-limpar:hover{/*aumenta o botao ao ser selecionado*/
+    flex: 2;
+}
+.botao-igual{
+    background-color: rgb(250, 240, 255);
+}
